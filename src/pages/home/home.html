@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="AddLayer()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block *ngFor="let layer of layers" (click)="showMore(layer)">Click Me!</button>
+  <ion-list *ngFor="let layer of layers">
+  <ion-item *ngIf="layer.Name">
+  </ion-item>
+  <ion-item>
+    <strong item-center class="layerheader">{{layer.Name}}</strong>
+    <ion-icon item-right name="add-circle" (click)="addMynotes(layer)"></ion-icon>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-33 *ngFor="let mynote of mynotes">
+        <img class ="imageicon" src="{{mynote.Image}}" (click)="ToCategory($event, mynote)" (press)="editMynotes(mynote, mynote.$key)"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-list>
+</ion-content>

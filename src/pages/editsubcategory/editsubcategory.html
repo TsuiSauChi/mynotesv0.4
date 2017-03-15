@@ -1,0 +1,28 @@
+<!--
+  Generated template for the Editsubcategory page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (submit)="updatecategory()">
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Edit Notes</ion-label>
+      <ion-input type="text" [(ngModel)]="activeSubCategory" name="activeSubCategory"></ion-input>
+    </ion-item>
+  </ion-list>
+    
+  <div padding>
+    <button ion-button full round type="submit" value="submit">Save</button>
+  </div>
+  </form>
+</ion-content>

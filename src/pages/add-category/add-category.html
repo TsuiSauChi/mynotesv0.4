@@ -1,0 +1,31 @@
+<!--
+  Generated template for the AddCategory page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (submit)="addNewnotes(category.value, layer)">
+
+  <img class ="imageicon2" src="http://placehold.it/125x125" />
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Add Category</ion-label>
+      <ion-input type="text" #category></ion-input>
+    </ion-item>
+  </ion-list>
+    
+  <div padding>
+    <button ion-button full round type="submit" value="submit">Save</button>
+  </div>
+  </form>
+</ion-content>
